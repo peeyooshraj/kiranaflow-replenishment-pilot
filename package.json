@@ -1,0 +1,11 @@
+{
+  "name": "kiranaflow",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build-standalone.mjs",
+    "start": "node server.mjs",
+    "test": "node tests/gate1.test.mjs && node tests/gate2.test.mjs && node tests/gate3.test.mjs && node tests/gate4.test.mjs && node tests/gate5.test.mjs && node tests/gate6.test.mjs && node tests/invariants.test.mjs && node tests/gate7.test.mjs && node tests/gate8.test.mjs && node tests/gate9.test.mjs && node tests/gate10.test.mjs && node tests/gate11.test.mjs"
+  }
+}

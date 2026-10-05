@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="KiranaFlow synthetic supply-chain decision-support prototype">
+  <title>KiranaFlow — Today's Stock Decisions</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="KiranaFlow home"><span class="brand-mark">K</span><span>KiranaFlow</span></a>
+    <div class="header-actions"><div class="demo-label" id="mode-label">Synthetic demo · no live orders</div><button class="setup-shop" id="setup-shop">Set up my shop</button></div>
+  </header>
+
+  <main>
+    <nav class="tabs" role="tablist" aria-label="KiranaFlow views">
+      <button id="tab-today" class="tab" role="tab" aria-selected="true" aria-controls="today-panel">Today</button>
+      <button id="tab-update" class="tab" role="tab" aria-selected="false" aria-controls="update-panel">Stock &amp; data</button>
+      <button id="tab-products" class="tab" role="tab" aria-selected="false" aria-controls="products-panel">Products</button>
+      <button id="tab-distributor" class="tab" role="tab" aria-selected="false" aria-controls="distributor-panel">Distributor</button>
+    </nav>
+
+    <section id="today-panel" role="tabpanel" aria-labelledby="tab-today"><div id="today-view" aria-live="polite"></div></section>
+    <section id="update-panel" role="tabpanel" aria-labelledby="tab-update" hidden><div id="update-view" aria-live="polite"></div></section>
+    <section id="products-panel" role="tabpanel" aria-labelledby="tab-products" hidden><div id="products-view"></div></section>
+    <section id="distributor-panel" role="tabpanel" aria-labelledby="tab-distributor" hidden><div id="distributor-view"></div></section>
+  </main>
+
+  <footer>
+    KiranaFlow research prototype · Synthetic operational data · Human review required · Nothing is ordered automatically
+  </footer>
+  <script type="module" src="./src/app.mjs"></script>
+</body>
+</html>
