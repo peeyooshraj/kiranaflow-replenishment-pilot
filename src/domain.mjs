@@ -1,0 +1,43 @@
+export const DATA_STATUS = Object.freeze({
+  KNOWN: "KNOWN",
+  UNKNOWN: "UNKNOWN",
+  DATA_MISSING: "DATA_MISSING",
+  STALE: "STALE",
+  CONFLICTED: "CONFLICTED",
+  INVALID: "INVALID",
+  INSUFFICIENT_HISTORY: "INSUFFICIENT_HISTORY",
+});
+
+export const EVENT_TYPE = Object.freeze({
+  SALE: "SALE",
+  RETURN: "RETURN",
+  LOST_DEMAND: "LOST_DEMAND",
+  STOCK_ADJUSTMENT: "STOCK_ADJUSTMENT",
+  INVENTORY_SNAPSHOT: "INVENTORY_SNAPSHOT",
+  DISTRIBUTOR_SNAPSHOT: "DISTRIBUTOR_SNAPSHOT",
+});
+
+export const DECISION_STATUS = Object.freeze({
+  PROPOSED: "PROPOSED",
+  ACCEPTED: "ACCEPTED",
+  MODIFIED: "MODIFIED",
+  DEFERRED: "DEFERRED",
+  REJECTED: "REJECTED",
+  STALE: "STALE",
+});
+
+export const SOURCE_TYPE = Object.freeze({
+  CSV_IMPORT: "CSV_IMPORT",
+  MANUAL: "MANUAL",
+  POS_EXPORT: "POS_EXPORT",
+  DISTRIBUTOR_EXPORT: "DISTRIBUTOR_EXPORT",
+  SYNTHETIC_TEST: "SYNTHETIC_TEST",
+});
+
+export function makeEventKey(event) {
+  return `${event.sourceId}::${event.eventId}`;
+}
+
+export function compareVersions(a, b) {
+  return a.version - b.version;
+}
